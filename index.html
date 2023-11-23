@@ -1,0 +1,341 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:v="urn:schemas-microsoft-com:vml"
+  lang="en"
+>
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      hs-webfonts="true"
+      href="https://fonts.googleapis.com/css?family=Lato|Lato:i,b,bi"
+    />
+    <title>Email template</title>
+    <meta property="og:title" content="Email template" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style type="text/css">
+      body{
+        font-family: "Lato", Arial, sans-serif;
+      }
+      
+      a {
+        text-decoration: underline;
+        color: inherit;
+        font-weight: bold;
+        color: #253342;
+      }
+
+      h1 {
+        font-size: 56px;
+      }
+
+      h2 {
+        font-size: 28px;
+        font-weight: 900;
+      }
+
+      p {
+        font-weight: 100;
+      }
+
+      td {
+        vertical-align: top;
+      }
+
+      #email {
+        margin: auto;
+        width: 600px;
+        background-color: white;
+      }
+
+      button {
+        font: inherit;
+        background-color: #1b1b1b;
+        border: none;
+        padding: 10px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 900;
+        color: white;
+        border-radius: 5px;
+        box-shadow: 3px 3px #1b1b1b;
+      }
+
+      .subtle-link {
+        font-size: 9px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #cbd6e2;
+      }
+      
+
+
+#emailCustomizer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0 10vw 0 10vw;
+
+}
+
+label {
+ 
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+
+}
+
+input {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+
+
+    </style>
+  </head>
+
+  <body
+    background-color="#F5F8FA"
+    style="
+      width: 100%;
+      margin: auto 0;
+      padding: 0;
+      font-family: Lato, sans-serif;
+      font-size: 18px;
+      color: #33475b;
+      word-break: break-word;
+    "
+  >
+    <!--- View in Browser Link -->
+
+    <form id="emailCustomizer">
+      <label for="headerImgSrc">Header Image URL:</label>
+      <input type="text" id="headerImgSrc" placeholder="Enter image URL">
+  
+      <label for="greetingText">Greeting Text (H1):</label>
+      <input type="text" id="greetingText" placeholder="Enter greeting text">
+  
+      <label for="paragraph1Text">Paragraph 1 Text:</label>
+      <textarea id="paragraph1Text" placeholder="Enter paragraph text"></textarea>
+  
+      <label for="button1Link">Button 1 Link URL:</label>
+      <input type="text" id="button1Link" placeholder="Enter link URL">
+  
+      <label for="button1LinkText">Button 1 Text:</label>
+      <input type="text" id="button1LinkText" placeholder="Enter button text">
+  
+      <label for="column1ImgUrl">Column 1 Background Image URL:</label>
+      <input type="text" id="column1ImgUrl" placeholder="Enter image URL">
+  
+      <label for="column1Text">Column 1 Text:</label>
+      <textarea id="column1Text" placeholder="Enter column text"></textarea>
+  
+      <label for="column1ButtonUrl">Column 1 Button Link URL:</label>
+      <input type="text" id="column1ButtonUrl" placeholder="Enter link URL">
+  
+      <label for="column1ButtonText">Column 1 Button Text:</label>
+      <input type="text" id="column1ButtonText" placeholder="Enter button text">
+  
+      <label for="column1Heading">Column 1 Heading (H1):</label>
+      <input type="text" id="column1Heading" placeholder="Enter heading text">
+  
+      <label for="column2ImgUrl">Column 2 Background Image URL:</label>
+      <input type="text" id="column2ImgUrl" placeholder="Enter image URL">
+  
+      <label for="column2Text">Column 2 Text:</label>
+      <textarea id="column2Text" placeholder="Enter column text"></textarea>
+  
+      <label for="column2ButtonUrl">Column 2 Button Link URL:</label>
+      <input type="text" id="column2ButtonUrl" placeholder="Enter link URL">
+  
+      <label for="column2ButtonText">Column 2 Button Text:</label>
+      <input type="text" id="column2ButtonText" placeholder="Enter button text">
+  
+      <label for="column2Heading">Column 2 Heading (H1):</label>
+      <input type="text" id="column2Heading" placeholder="Enter heading text">
+  
+      <button type="button" onclick="customizeEmail()">Customize Email</button>
+      <br>
+      <br>
+      <button onclick="downloadHTML()">Download HTML</button>
+
+  </form>
+  
+  
+
+<hr>
+
+    <div id="email">
+      <!--- Banner -->
+      <table role="presentation" width="100%">
+        <tr>
+          <td align="center" style="color: white;" >
+            <img
+              id="header-img"
+              src="https://uploads-ssl.webflow.com/5d1f511c62a000e427bbc3f0/655f57202d9300d38e0b86e5_headerLogo.jpg"
+              align="center"
+              style="color: white; width: 100%;"
+            />
+           
+          </td>
+        </tr>
+      </table>
+
+      <!--- First Row -->
+
+      <table
+        role="presentation"
+        border="0"
+        cellpadding="0"
+        cellspacing="10px"
+        style="padding: 30px 30px 30px 60px"
+      >
+        <tr>
+          <td>
+            <h2 id="greeting">Hi, First Name</h2>
+            <p id="paragraph1">
+              CityCoast Centre has an established
+              reputation as an impressive venue, hosting
+              high-end music and corporate events.
+              We have flexible and modern spaces that
+              will be perfect for your event, no matter
+              the size or function. With bespoke pricing
+              packages available, we are confident that
+              we can provide exactly what you need.
+              Our team are the ones who make the
+              biggest difference - knowledgeable, helpful
+              and passionate about excellence - they
+              will be on hand before, during and after
+              your event to make sure everything runs
+              smoothly.<br><br>
+              We love nothing better than working with
+              you to make sure your meeting or event is a
+              success
+            </p>
+            <div style="text-align: center;">
+              <a id="button1link" href="https://citycoastcentre.co.uk">
+            <button id="button1linktext">Find Out More</button>
+            </a>
+          </div>
+          </td>
+        </tr>
+      </table>
+      <table role="presentation" border="0" cellpadding="0" cellspacing="10px" width="100%" style="padding: 30px 30px 30px 60px">
+        <tr>
+            <!-- First Column -->
+            <td>
+                <table border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <!-- Image -->
+                        <td id="column1img" style="width: 200px; height: 200px; background-image: url('https://uploads-ssl.webflow.com/5d1f511c62a000e427bbc3f0/5d2600116c9788cde4852740_Next%20Steps%201.jpg'); background-size: cover; background-position: center;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- Text -->
+                        <td>
+                            <h2 id="column1heading">What we offer</h2>
+                            <p id="column1text">
+                            This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. 
+                          
+                          </p>
+                          
+                        </td>
+                    </tr>
+                </table>
+            </td>
+    
+            <!-- Second Column -->
+            <td>
+                <table border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <!-- Image -->
+                        <td id="column2img" style="width: 200px; height: 200px; background-image: url('https://uploads-ssl.webflow.com/5d961020cfbd820e6bad908b/6458baf6926661030be18fd3_Jess%20websitePS%20cropped.jpg'); background-size: cover; background-position: center;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- Text -->
+                        <td>
+                            <h2 id="column2heading">Meet the Team</h2>
+                            <p id="column2text">
+                              Our events team is exceptionally well trained - whatever the need, our team will make sure everyone at your event has an excellent experience. They will be on hand throughout your event to help with anything.
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    
+        <tr>
+            <!-- Buttons Row -->
+            <td>
+              <div style="text-align: center">
+                <a id="column1button" href="https://www.citycoastcentre.co.uk/#Our-Spaces"><button id="column1buttontext" style="margin-top: 20px;">View our spaces</button></a>
+              </div>
+              </td>
+            <td>
+              <div style="text-align: center">
+                <a id="column2button" href="https://www.citycoastcentre.co.uk/#Team">
+                <button id="column1buttontext" style="margin-top: 20px;">Meet the team</button>
+                </a>
+                </div>
+            </td>
+        </tr>
+    </table>
+    
+
+
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+          <!-- Image 1 -->
+          <td width="33%" style="padding: 10px; height: 150px; background-image: url('https://uploads-ssl.webflow.com/5d1f511c62a000e427bbc3f0/5ef1fc8b10744282405d07eb_VIP%205.jpg'); background-size: cover; background-position: center;">
+          </td>
+          <!-- Image 2 -->
+          <td width="33%" style="padding: 10px; height: 150px; background-image: url('https://uploads-ssl.webflow.com/5d1f511c62a000e427bbc3f0/5ed8fe4c96ecbf344abb971e_ccc-venue-32_Fotor.jpg'); background-size: cover; background-position: center;">
+          </td>
+          <!-- Image 3 -->
+          <td width="33%" style="padding: 10px; height: 150px; background-image: url('https://uploads-ssl.webflow.com/5d1f511c62a000e427bbc3f0/5e2096231d9a8eba1910d1c7_THEATURE%20O3%20PHOTO.jpg'); background-size: cover; background-position: center;">
+          </td>
+      </tr>
+  </table>
+  
+
+
+      <!-- Footer Section -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: black; color: white;">
+  <tr>
+      <td align="center" style="padding: 20px;">
+          <!-- Social Media Icons -->
+          <a href="https://facebook.com/citycoastchurch" target="_blank"><img style="width:40px; padding: 20px" src="https://uploads-ssl.webflow.com/5d1f511c62a000e427bbc3f0/655f5cf5e8c11c5897d8eb67_facebook-app-round-icon.png" alt="Facebook"></a>
+          <a href="https://instagram.com/citycoastchurch" target="_blank"><img style="width:40px; padding: 20px "src="https://uploads-ssl.webflow.com/5d1f511c62a000e427bbc3f0/655f5cf4ca025fc7964d02ab_instagram-white-icon.png" alt="Instagram"></a>
+          <a href="https://youtube.com/@citycoastchurch" target="_blank"><img style="width:40px; padding: 20px" src="https://uploads-ssl.webflow.com/5d1f511c62a000e427bbc3f0/655f5cf4f282d765f11e4fb4_youtube-app-white-icon.png" alt="YouTube"></a>
+
+         
+          <!-- Add more social icons as needed -->
+
+          <!-- Contact Information -->
+          <p style="margin-top: 20px; font-size: 14px; line-height: 1.6;">
+              Address: CityCoast Centre, North Street, Portslade, BN41 1DG<br>
+              Phone: 01273 433433<br>
+              Email: <a href="mailto:hello@citycoastcentre.co.uk" style="color: white;">hello@citycoastcentre.co.uk</a>
+          </p>
+      </td>
+  </tr>
+</table>
+
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
